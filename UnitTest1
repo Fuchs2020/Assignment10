@@ -22,7 +22,6 @@ namespace LambdaUnitTestExample.Tests
         [InlineData(Condition.GOOD)]
         [InlineData(Condition.FAIR)]
         [InlineData(Condition.BAD)]
-
         public void TestConditions(Condition c)
         {
             Assert.True(Convert.ToInt32(c) >= 0);
@@ -38,13 +37,13 @@ namespace LambdaUnitTestExample.Tests
             Assert.Equal(25, car.Speed);
             car.Speed = 200;
             Assert.Equal(200, car.Speed);
-            car.Speed = 200;
+            car.Speed = 201;
             Assert.Equal(200, car.Speed);
             car.Speed = -25;
             Assert.Equal(-25, car.Speed);
             car.Speed = -50;
             Assert.Equal(-50, car.Speed);
-            car.Speed = -50;
+            car.Speed = -51;
             Assert.Equal(-50, car.Speed);
         }
     }
