@@ -20,7 +20,7 @@ namespace LambdaUnitTestExample
     }
     public class Car
     {
-        public int Speed;
+        private int CarSpeed;
         public string Make;
         public readonly Condition Condition;
             
@@ -31,6 +31,25 @@ namespace LambdaUnitTestExample
             this.Condition = Condition;
         }
 
+        public int Speed
+        {
+            get
+            {
+                return CarSpeed;
+            }
+            set
+            {
+                CarSpeed = value;
+                if  (CarSpeed < -50)
+                {
+                    Speed = -50;
+                }
+                else if (CarSpeed > 200)
+                {
+                    Speed = 200;
+                }
+            }
+        }
+
     }
 
-}
